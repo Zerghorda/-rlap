@@ -1,0 +1,116 @@
+body{
+    background-color: rgb(199, 197, 194);
+}
+
+main{
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 
+    "h h"
+    "a n"
+    "f f";
+}
+
+header, article, footer, nav{
+    background-color: rgb(255, 255, 255);
+    padding: 1em;
+}
+
+.box{
+    background-color: rgb(255, 255, 255);
+}
+
+header{
+    grid-area: h;
+    text-align: center;
+    background-image: url(7c94d6d7b1ce3b4460e8da3ca019cc60.jpg);
+    background-size: cover;
+}
+
+article{
+    grid-area: a;
+    height: 50vh;
+}
+
+nav{
+    grid-area: n;
+}
+
+footer{
+    grid-area: f;
+    text-align: center;
+}
+
+input[type=submit]{
+    transition-duration: 0.4s;
+    margin-left: 20px;
+    background-color: rgb(255, 0, 0);
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 42%;
+}
+
+input[type=submit]:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+fieldset{
+    border: rgb(255, 0, 0) 2px solid;
+    margin: 15px;
+    padding: 15px;
+}
+
+legend{
+    text-align: right;
+    background-color: rgb(252, 151, 137);
+    color: rgb(255, 0, 0);
+    border-radius: 5px;
+    padding: 2px 30px;
+}
+
+label{
+    width: 30%;
+    float: left;
+    margin-right: 20px;
+}
+
+input, label{
+    margin-top: 20px;
+}
+
+
+@media all and (max-width: 1200px){
+    main{
+    grid-template-columns: 2fr 1fr;
+    }
+
+    .box{
+        background-color: aquamarine;
+    }
+}
+
+@media all and (max-width: 600px){
+    main{
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "h"
+    "n"
+    "a"
+    "f";
+    }
+
+    .box{
+        background-color: blueviolet;
+    }
+}
